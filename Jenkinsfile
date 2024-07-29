@@ -3,9 +3,9 @@ pipeline {
 
     parameters {
         string(name: 'TARGET_ENV', defaultValue: 'staging', description: 'Target environment for deployment')
-        booleanParam(name: 'RUN_TESTS', defaultValue: true, description: 'Run tests after build?')
+        booleanParam(name: 'RUN_TESTS', description: 'Run tests after build?')
         choice(name: 'BUILD_TYPE', choices: ['Debug', 'Release'], description: 'Type of build')
-        text(name: 'CUSTOM_MESSAGE', defaultValue: 'No message provided', description: 'Custom message for the build')
+        text(name: 'CUSTOM_MESSAGE', description: 'Custom message for the build')
     }
 
     stages {
