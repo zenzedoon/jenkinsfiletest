@@ -1,4 +1,3 @@
-// Jenkinsfile
 properties([
     parameters([
         string(name: "texte1", description: "teste 1:", trim: true),
@@ -9,13 +8,16 @@ properties([
 
 pipeline {
     agent {
-        docker {
-            image 'docker:latest'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
-        }
+        label 'docker'
     }
     stages {
         stage('Build') {
+            agent {
+                docker {
+                    image 'docker:latest'
+                    args '-v /var/run/docker.sock:/var/run/docker.sock'
+                }
+            }
             steps {
                 script {
                     // Run the hello-world Docker container
