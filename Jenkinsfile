@@ -52,7 +52,7 @@ boolean success = false
 //    ]) {
 //withTools(extraWorkspaceSizeGi: 64, [[image:'04325/ansible-bdd-tools-full', name: 'ansible-full', version: '1.0.0', registry: 'sncf'],[name: 'sonar-scanner', version: 'latest', registry: 'eul']], timeout: 180) { 
 stage('Checkout') {
-                    println "🔰 Récupération du code source de la branche $BRANCH_NAME"
+                    println "🔰 Récupération du code source de la branche"
                     scmInfo = checkout scm
                     env.GIT_URL = scmInfo.GIT_URL
                     env.GIT_COMMIT = scmInfo.GIT_COMMIT
