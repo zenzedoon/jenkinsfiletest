@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 //déclaration de la shared library build_libs
-@Library("build_libs",'iac_libs','common_libs','deployment') _
+//@Library("build_libs",'iac_libs','common_libs','deployment') _
 ArrayList ansible_versions = ["8","9"]
 ArrayList list_environnement = ["sandbox","nprod"]
 ArrayList verbosity_list = ["v","vv","vvv","vvvv"]
