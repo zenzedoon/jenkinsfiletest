@@ -17,7 +17,7 @@ properties([
         string(name: "VAULT", description: "Mot de passe VAULT pour le déploiement", trim: true),
         string(name: "EXTRA_VARS", description: "Extra vars ansible à fournir au format YAML", trim: true),
         choice(name: "VERBOSITE", description: "Niveau de verbosité", choices: verbosity_list.join('\n')),
-        booleanParam(name: "MODE_CHECK", description: "Si la case est cochée, le playbook sera execute en mode "dry-run"", defaultValue: false),
+        booleanParam(name: "MODE_CHECK", description: "Si la case est cochée, le playbook sera execute en mode 'dry-run'", defaultValue: false),
         booleanParam(name: "ROLLBACK", description: "Si case cochée, le playbook joué sera le suivant: XXXX_playbook_rollback.yml", defaultValue: false),
         string(name: "LIMITE", description: "Liste des limites (ansible) séparées par des virgules. ex: host1,host2,host3", trim: true)
 
