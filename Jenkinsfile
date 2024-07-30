@@ -129,6 +129,7 @@ withTools(extraWorkspaceSizeGi: 64, [[image:'04325/ansible-bdd-tools-full', name
                     }
                 }
         }
+    }
         catch(Exception err){
             success = false
             currentBuild.result = 'FAILURE'
@@ -154,7 +155,6 @@ withTools(extraWorkspaceSizeGi: 64, [[image:'04325/ansible-bdd-tools-full', name
                     // content = "Failed ${BUILD_URL}"
                     // emailext body: content, subject: subject, to: "ld.dosn.starter.team@sncf.fr"
                 }
-                }
+            }
 
-   }
 }
