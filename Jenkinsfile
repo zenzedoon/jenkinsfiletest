@@ -27,7 +27,7 @@ properties([
 
 def idAresis_p = params.ARESIS_ID //"04325"
 def nomAresis_p = params.ARESIS_NAME //"azure_rm_sql_role_commun"
-def nomPlaybook_p = parms.PAYBOOK_NAME //"playbook.yml"
+def nomPlaybook_p = params.PAYBOOK_NAME //"playbook.yml"
 def versionAnsible_p = params.VERSION
 def urlInventory_p = parmas.REFERENCE_GIT_INVENTAIRE //"https://gitlab-repo-gpf.apps.eul.sncf.fr/dosn/groupefabit-dosn/04325/azure_rm_sql_role_commun.git"
 def urlPlaybook_p = params.REFERENCE_GIT_PLAYBOOK //"https://gitlab-repo-gpf.apps.eul.sncf.fr/dosn/groupefabit-dosn/04325/azure_rm_sql_role_commun.git"
