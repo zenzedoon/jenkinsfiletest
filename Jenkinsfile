@@ -11,7 +11,7 @@ properties([
         string(name: "PAYBOOK_NAME", description:"Le nom du playbook à deployer", trim: true),
         choice(name: "VERSION", description: "Version d'Ansible a utilisé:", choices: ansible_versions.join('\n')),
         string(name: "REFERENCE_GIT_PLAYBOOK", description: "Ce paramètre correspond à une branche ou un tag du repo contenant le playbook à déployer.<br /><i>Si le champ est laissé vide, le job se base sur le tag (git) correspondant à la version indiquée.</i>", trim: true),
-        string(name: "REFERENCE_GIT_INVENTAIRE", description: "Ce paramètre correspond à une branche ou un tag du repo contenant l'inventaire à déployer.<br /> <i>Si le champ est laissé vide, le job se base sur le tag (git) correspondant à la version indiquée.</i> ", trim: true)
+        string(name: "REFERENCE_GIT_INVENTAIRE", description: "Ce paramètre correspond à une branche ou un tag du repo contenant l'inventaire à déployer.<br /> <i>Si le champ est laissé vide, le job se base sur le tag (git) correspondant à la version indiquée.</i> ", trim: true),
         choice(name: "ENVIRONNEMENT", description: "nom de l'environnement", choices: list_environnement.join('\n')),
         string(name: "TAG_ANSIBLE", description: "La liste des tag ansible a utilisé", trim: true),
         string(name: "VAULT", description: "Mot de passe VAULT pour le déploiement", trim: true),
